@@ -40,10 +40,10 @@ fn setup_world(mut commands: Commands,
         }, Collider::trimesh(points, triangle_indices)));
     }
 
-    // commands.insert_resource(AmbientLight {
-    //     color: Color::WHITE,
-    //     brightness: 0.0,
-    // });
+    commands.insert_resource(AmbientLight {
+        color: Color::RED,
+        brightness: 0.2,
+    });
 
     commands.spawn(DirectionalLightBundle {
         directional_light: DirectionalLight {
