@@ -26,10 +26,12 @@ impl Sector {
 
         let indices_floor = range
             .windows(2)
+            .skip(1)
             .flat_map(|i| vec![0, i[0], i[1]]);
 
-        let indices_ceil =  range
+        let indices_ceil = range
             .windows(2)
+            .skip(1)
             .flat_map(|i| vec![i[1], i[0], 0])
             .map(|i| i + len);
 
